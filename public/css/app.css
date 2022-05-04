@@ -129,3 +129,87 @@ div.card h5 {
   font-weight: 300;
 }
 
+div.dc-footer {
+  width: 100vw;
+  height: 53vh;
+}
+
+div.dc-footer section.footer-top {
+  width: 100vw;
+  min-width: 900px;
+  height: 280px;
+  background-image: url(/images/footer-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+div.dc-footer section.footer-top div.footer-list {
+  margin-top: 1.2rem;
+  display: flex;
+}
+
+div.dc-footer section.footer-top div.footer-list-middle {
+  margin: 0 1.5rem;
+}
+
+div.dc-footer section.footer-top div.logo-bg {
+  width: 450px;
+  height: 100%;
+  background-image: url(/images/dc-logo-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.dc-footer section.footer-top a {
+  color: gray;
+  font-size: 0.7rem;
+}
+
+div.dc-footer section.footer-bottom {
+  width: 100%;
+  height: 100px;
+  background-color: #303030;
+  text-transform: uppercase;
+}
+
+div.dc-footer section.footer-bottom a {
+  color: white;
+  border: 2px solid #0282F9;
+  padding: 0.6rem;
+}
+
+div.dc-footer section.footer-bottom div.social-media {
+  display: flex;
+  align-items: center;
+}
+
+div.dc-footer section.footer-bottom div.social-media h3 {
+  color: #0282F9;
+  padding-right: 0.5rem;
+}
+
+div.dc-footer section.footer-bottom div.social-media img {
+  width: 30px;
+  height: 30px;
+  margin-left: 1rem;
+}
+
+h4 {
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+  padding: 0.7rem 0;
+}
+
+ul {
+  padding-left: 0;
+  padding-bottom: 0.3rem;
+  margin: 0;
+}
+
+ul li {
+  line-height: 0.9rem;
+}
+

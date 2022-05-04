@@ -14,17 +14,34 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return "Homepage che non è stato creato";
+    return "Homepage che non è stato creato -> /comics";
 });
 
 Route::get('/comics', function () {
     $navList = config('navbar');
     $comics = config('comics');
     $mainNavCards = config('mainNavCards');
+    $comicsFooter = config('comicsFooter');
+    $dcFooter = config('dcFooter');
+    $sitesFooter = config('sitesFooter');
+    $shopFooter = [
+        [
+            "url" => "#",
+            "text" => "Shop DC"
+        ],
+        [
+            "url" => "#",
+            "text" => "Shop DC Collectibles"
+        ]
+        ];
     $data = [
         "navList" => $navList,
         "comics" => $comics,
-        "mainNavCards" => $mainNavCards
+        "mainNavCards" => $mainNavCards,
+        "comicsFooter" => $comicsFooter,
+        "dcFooter" => $dcFooter,
+        "sitesFooter" => $sitesFooter,
+        "shopFooter" => $shopFooter
     ];
     return view('guest.comics', $data);
 });
