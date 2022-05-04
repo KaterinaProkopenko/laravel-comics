@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('guest.cards');
+    return "Homepage che non è stato creato";
+});
+
+Route::get('/comics', function () {
+    $navList = config('navbar');
+    $comics = config('comics');
+    $mainNavCards = config('mainNavCards');
+    $data = [
+        "navList" => $navList,
+        "comics" => $comics,
+        "mainNavCards" => $mainNavCards
+    ];
+    return view('guest.comics', $data);
 });
