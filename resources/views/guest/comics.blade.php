@@ -1,15 +1,18 @@
 @extends('layouts.base')
 
+@section('title', 'Comics')
+    
+
 @section('main-content')
 
     <div class="dc-main">
         <section class="dc-main-top">
-            <div id="jumbotron"></div>
+            <div class="jumbotron"></div>
             <div class="container">
-                @foreach ($comics as $comic)
+                @foreach ($comics as $comicsElement)
                     <div class="card">
-                        <img src="{{$comic['thumb']}}" alt="{{$comic['series']}}">
-                        <h5>{{$comic['series']}}</h5>
+                        <img src="{{$comicsElement['thumb']}}" alt="{{$comicsElement['series']}}">
+                        <h5>{{$comicsElement['series']}}</h5>
                     </div>
                 @endforeach
             </div>
