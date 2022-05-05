@@ -127,6 +127,14 @@ div.dc-footer{
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+
+            h4{
+                text-transform: uppercase;
+                color: $colorWhite;
+                margin: 0;
+                padding: .7rem 0;
+            }
+
             div.footer-list{
                 margin-top: 1.2rem;
                 display: flex;
@@ -175,12 +183,7 @@ div.dc-footer{
             }
         }
 }
-h4{
-    text-transform: uppercase;
-    color: $colorWhite;
-    margin: 0;
-    padding: .7rem 0;
-}
+
 ul{
     padding-left: 0;
     padding-bottom: .3rem;
@@ -197,7 +200,6 @@ div.blue-container{
 }
 
 div.main-single-product-top{
-    width: 100%;
     display: flex;
     position: relative;
     padding: 0 45px;
@@ -211,7 +213,7 @@ div.main-single-product-top{
         width: 70%; 
 
         h2{
-            color: $SingleProductColorPrimary;
+            color: $singleProductColorPrimary;
         }
 
         div.availability{
@@ -234,4 +236,56 @@ div.main-single-product-top{
     div.right-content{
         width: 30%;
     }
+}
+
+section.bg-product-bottom{
+    background-color: #F6F6F6;
+
+    div.main-single-product-bottom{
+
+        div.about-single-product{
+            display: flex;
+            width: 100%;
+
+            h3{
+                color: $singleProductColorPrimary;
+                border-bottom: 1px solid lightgray;
+            }
+
+            div.talent{
+                width: 50%;
+                padding-right: 3rem;
+
+                div.artists{
+                    border-bottom: $detailBorderBottom;
+                }
+
+                div.writers{
+                    border-bottom: $detailBorderBottom;
+                }
+            }
+
+            div.specs{
+                width: 50%;
+
+                div{
+                    border-bottom: $detailBorderBottom;
+                }
+            }
+
+            p.display-inline{
+                display: inline-block;
+            }
+
+            p.single-product-title{
+                width: 40%;
+            }
+        }
+    }
+}
+
+.single-product-container{
+    width: 900px;
+    display: flex;
+    margin: 0 auto;
 }

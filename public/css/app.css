@@ -129,6 +129,12 @@ div.dc-footer section.footer-top {
   background-repeat: no-repeat;
   background-position: center;
 }
+div.dc-footer section.footer-top h4 {
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+  padding: 0.7rem 0;
+}
 div.dc-footer section.footer-top div.footer-list {
   margin-top: 1.2rem;
   display: flex;
@@ -173,13 +179,6 @@ div.dc-footer section.footer-bottom div.social-media img {
   margin-left: 1rem;
 }
 
-h4 {
-  text-transform: uppercase;
-  color: white;
-  margin: 0;
-  padding: 0.7rem 0;
-}
-
 ul {
   padding-left: 0;
   padding-bottom: 0.3rem;
@@ -196,7 +195,6 @@ div.blue-container {
 }
 
 div.main-single-product-top {
-  width: 100%;
   display: flex;
   position: relative;
   padding: 0 45px;
@@ -226,4 +224,44 @@ div.main-single-product-top div.left-content div.availability div.av-right {
 }
 div.main-single-product-top div.right-content {
   width: 30%;
+}
+
+section.bg-product-bottom {
+  background-color: #F6F6F6;
+}
+section.bg-product-bottom div.main-single-product-bottom div.about-single-product {
+  display: flex;
+  width: 100%;
+}
+section.bg-product-bottom div.main-single-product-bottom div.about-single-product h3 {
+  color: #003F5E;
+  border-bottom: 1px solid lightgray;
+}
+section.bg-product-bottom div.main-single-product-bottom div.about-single-product div.talent {
+  width: 50%;
+  padding-right: 3rem;
+}
+section.bg-product-bottom div.main-single-product-bottom div.about-single-product div.talent div.artists {
+  border-bottom: 1px solid lightgray;
+}
+section.bg-product-bottom div.main-single-product-bottom div.about-single-product div.talent div.writers {
+  border-bottom: 1px solid lightgray;
+}
+section.bg-product-bottom div.main-single-product-bottom div.about-single-product div.specs {
+  width: 50%;
+}
+section.bg-product-bottom div.main-single-product-bottom div.about-single-product div.specs div {
+  border-bottom: 1px solid lightgray;
+}
+section.bg-product-bottom div.main-single-product-bottom div.about-single-product p.display-inline {
+  display: inline-block;
+}
+section.bg-product-bottom div.main-single-product-bottom div.about-single-product p.single-product-title {
+  width: 40%;
+}
+
+.single-product-container {
+  width: 900px;
+  display: flex;
+  margin: 0 auto;
 }
