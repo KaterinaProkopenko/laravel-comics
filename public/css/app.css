@@ -50,12 +50,10 @@ div.dc-header ul li a {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
-
-.active {
+div.dc-header .active {
   border-bottom: 4px solid #0282F9;
 }
-
-.active-link {
+div.dc-header .active-link {
   color: #0282F9;
 }
 
@@ -65,6 +63,24 @@ section.dc-main-top {
 }
 section.dc-main-top h1 {
   color: white;
+}
+section.dc-main-top a {
+  flex-basis: 14.1666666667%;
+}
+section.dc-main-top a div.card {
+  width: 100%;
+  height: 250px;
+}
+section.dc-main-top a div.card img {
+  width: 100%;
+  height: 170px;
+}
+section.dc-main-top a div.card h5 {
+  margin: 0;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 300;
 }
 
 div.jumbotron {
@@ -99,22 +115,6 @@ section.dc-main-bottom ul a h5 {
   font-size: 0.8rem;
   text-transform: uppercase;
   color: white;
-}
-
-div.card {
-  flex-basis: 14.1666666667%;
-  height: 250px;
-}
-div.card img {
-  width: 100%;
-  height: 170px;
-}
-div.card h5 {
-  margin: 0;
-  padding: 0.5rem;
-  text-transform: uppercase;
-  color: white;
-  font-weight: 300;
 }
 
 div.dc-footer {
@@ -260,8 +260,30 @@ section.bg-product-bottom div.main-single-product-bottom div.about-single-produc
   width: 40%;
 }
 
+div.main-single-product-links {
+  width: 100%;
+}
+div.main-single-product-links ul.single-product-list {
+  display: flex;
+  width: 100%;
+}
+div.main-single-product-links ul.single-product-list a.list-link {
+  display: flex;
+  color: gray;
+  text-transform: uppercase;
+  width: 180px;
+  height: 60px;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid lightgray;
+}
+div.main-single-product-links ul.single-product-list a.list-link img {
+  width: 25px;
+  height: 35px;
+  filter: invert(20%);
+}
+
 .single-product-container {
   width: 900px;
-  display: flex;
   margin: 0 auto;
 }

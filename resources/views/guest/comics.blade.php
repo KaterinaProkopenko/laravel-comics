@@ -10,10 +10,12 @@
             <div class="jumbotron"></div>
             <div class="container">
                 @foreach ($comics as $comicsElement)
-                    <div class="card">
-                        <img src="{{$comicsElement['thumb']}}" alt="{{$comicsElement['series']}}">
-                        <h5>{{$comicsElement['series']}}</h5>
-                    </div>
+                    <a href="">
+                        <div class="card">
+                            <img src="{{$comicsElement['thumb']}}" alt="{{$comicsElement['series']}}">
+                            <h5>{{$comicsElement['series']}}</h5>
+                        </div>
+                    </a>
                 @endforeach
             </div>
         </section>

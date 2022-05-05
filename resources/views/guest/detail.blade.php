@@ -67,9 +67,20 @@
                 </div>
             </div>
 
-            <div class="main-single-product-links"></div>
+            <div class="main-single-product-links">
+                <ul class="single-product-list">
+                    @foreach ($mainNavCards as $navCard)
+                        <li>
+                            <a href="{{$navCard['url']}}" class="list-link">
+                                <h5>{{$navCard['title']}}</h5>
+                                <img src="{{asset($navCard['image'])}}" alt="{{$navCard['title']}}">
+                            </a>
+                        </li>
+                    @endforeach
+
+                </ul>
+            </div>
         </div>
     </section>
-    
 
 @endsection

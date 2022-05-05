@@ -42,31 +42,14 @@ Route::get('/', function () {
     return view('guest.comics', $data);
 })->name('comics-page');
 
-Route::get('/detail', function () {
-    $navList = config('navbar');
+Route::get('/{id}', function ($id) {
     $comics = config('comics');
     $mainNavCards = config('mainNavCards');
-    $comicsFooter = config('comicsFooter');
-    $dcFooter = config('dcFooter');
-    $sitesFooter = config('sitesFooter');
-    $shopFooter = [
-        [
-            "url" => "#",
-            "text" => "Shop DC"
-        ],
-        [
-            "url" => "#",
-            "text" => "Shop DC Collectibles"
-        ]
-        ];
-    $data = [
-        "navList" => $navList,
-        "comics" => $comics,
-        "mainNavCards" => $mainNavCards,
-        "comicsFooter" => $comicsFooter,
-        "dcFooter" => $dcFooter,
-        "sitesFooter" => $sitesFooter,
-        "shopFooter" => $shopFooter
-    ];
-    return view('guest.detail', $data);
+
+    if(is_numeric($id) && $id >= 0 && $id < count($comics)) {
+        return view('guest.detail', ["comics" => $comics[$id], "mainNavCards" => $mainNavCards]);
+    }else{
+        abort(404);
+    }
+
 })->name('comics-product-page');
