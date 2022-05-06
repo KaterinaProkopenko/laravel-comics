@@ -8,12 +8,12 @@
     <div class="dc-main">
         <section class="dc-main-top">
             <div class="jumbotron"></div>
-            <div class="container">
-                @foreach ($comics as $comicsElement)
-                    <a href="">
+            <div id="container-comics" class="container">
+                @foreach ($comics as $id => $comic)
+                    <a href="{{ url("/$id") }}">
                         <div class="card">
-                            <img src="{{$comicsElement['thumb']}}" alt="{{$comicsElement['series']}}">
-                            <h5>{{$comicsElement['series']}}</h5>
+                            <img src="{{$comic['thumb']}}" alt="{{$comic['series']}}">
+                            <h5>{{$comic['series']}}</h5>
                         </div>
                     </a>
                 @endforeach

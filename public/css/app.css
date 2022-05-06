@@ -2,7 +2,8 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Roboto Condensed;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 div.container {
@@ -194,35 +195,36 @@ div.blue-container {
   background-color: #0282F9;
 }
 
-div.main-single-product-top {
+section.main-single-product-top {
   display: flex;
   position: relative;
   padding: 0 45px;
 }
-div.main-single-product-top img.product-poster {
+section.main-single-product-top img.product-poster {
   position: absolute;
   top: -310px;
 }
-div.main-single-product-top div.left-content {
+section.main-single-product-top div.left-content {
   width: 70%;
 }
-div.main-single-product-top div.left-content h2 {
+section.main-single-product-top div.left-content h2 {
   color: #003F5E;
+  text-transform: uppercase;
 }
-div.main-single-product-top div.left-content div.availability {
+section.main-single-product-top div.left-content div.availability {
   display: flex;
   width: 100%;
   background-color: #55BA59;
   border-bottom: 1px solid rgb(104, 130, 59);
 }
-div.main-single-product-top div.left-content div.availability div.av-left {
+section.main-single-product-top div.left-content div.availability div.av-left {
   width: 70%;
   border-right: 1px solid rgb(104, 130, 59);
 }
-div.main-single-product-top div.left-content div.availability div.av-right {
+section.main-single-product-top div.left-content div.availability div.av-right {
   width: 30%;
 }
-div.main-single-product-top div.right-content {
+section.main-single-product-top div.right-content {
   width: 30%;
 }
 
@@ -260,14 +262,14 @@ section.bg-product-bottom div.main-single-product-bottom div.about-single-produc
   width: 40%;
 }
 
-div.main-single-product-links {
+section.main-single-product-links {
   width: 100%;
 }
-div.main-single-product-links ul.single-product-list {
+section.main-single-product-links ul.single-product-list {
   display: flex;
   width: 100%;
 }
-div.main-single-product-links ul.single-product-list a.list-link {
+section.main-single-product-links ul.single-product-list a.list-link {
   display: flex;
   color: gray;
   text-transform: uppercase;
@@ -277,7 +279,7 @@ div.main-single-product-links ul.single-product-list a.list-link {
   gap: 10px;
   border: 1px solid lightgray;
 }
-div.main-single-product-links ul.single-product-list a.list-link img {
+section.main-single-product-links ul.single-product-list a.list-link img {
   width: 25px;
   height: 35px;
   filter: invert(20%);
@@ -286,4 +288,8 @@ div.main-single-product-links ul.single-product-list a.list-link img {
 .single-product-container {
   width: 900px;
   margin: 0 auto;
+}
+
+#container-comics {
+  padding: 3rem 0;
 }

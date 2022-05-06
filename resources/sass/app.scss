@@ -5,7 +5,8 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Roboto Condensed;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 div.container{
@@ -204,7 +205,7 @@ div.blue-container{
     background-color: $brandPrimary;
 }
 
-div.main-single-product-top{
+section.main-single-product-top{
     display: flex;
     position: relative;
     padding: 0 45px;
@@ -219,6 +220,7 @@ div.main-single-product-top{
 
         h2{
             color: $singleProductColorPrimary;
+            text-transform: uppercase;
         }
 
         div.availability{
@@ -289,7 +291,7 @@ section.bg-product-bottom{
     }
 }
 
-div.main-single-product-links{
+section.main-single-product-links{
     width: 100%;
     ul.single-product-list{
         display: flex;
@@ -317,4 +319,8 @@ div.main-single-product-links{
 .single-product-container{
     width: 900px;
     margin: 0 auto;
+}
+
+#container-comics{
+    padding: 3rem 0;
 }

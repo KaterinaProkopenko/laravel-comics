@@ -1,7 +1,9 @@
 <header>
     <div class="dc-header">
         <div class="container">
-          <img src="{{asset("images/dc-logo.png")}}" alt="DC logo">
+          <a href="{{route('comics-page')}}">
+            <img src="{{asset("images/dc-logo.png")}}" alt="DC logo">
+          </a>
           <ul>
               @foreach ($navList as $navItem)
                 <li>

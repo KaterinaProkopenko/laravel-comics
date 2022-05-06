@@ -43,11 +43,34 @@ Route::get('/', function () {
 })->name('comics-page');
 
 Route::get('/{id}', function ($id) {
+    $navList = config('navbar');
     $comics = config('comics');
     $mainNavCards = config('mainNavCards');
+    $comicsFooter = config('comicsFooter');
+    $dcFooter = config('dcFooter');
+    $sitesFooter = config('sitesFooter');
+    $shopFooter = [
+        [
+            "url" => "#",
+            "text" => "Shop DC"
+        ],
+        [
+            "url" => "#",
+            "text" => "Shop DC Collectibles"
+        ]
+    ];
+    $data = [
+        "navList" => $navList,
+        "comics" => $comics[$id],
+        "mainNavCards" => $mainNavCards,
+        "comicsFooter" => $comicsFooter,
+        "dcFooter" => $dcFooter,
+        "sitesFooter" => $sitesFooter,
+        "shopFooter" => $shopFooter
+    ];
 
     if(is_numeric($id) && $id >= 0 && $id < count($comics)) {
-        return view('guest.detail', ["comics" => $comics[$id], "mainNavCards" => $mainNavCards]);
+        return view('guest.detail', $data);
     }else{
         abort(404);
     }
