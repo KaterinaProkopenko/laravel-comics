@@ -7,7 +7,7 @@
         ],
         [
             "text" => "comics",
-            "url" => "comics",
+            "url" => "/",
             "active" => true
         ],
         [

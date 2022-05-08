@@ -83,7 +83,7 @@ section.dc-main-top{
               padding: .5rem;
               text-transform: uppercase;
               color: $colorWhite;
-              font-weight: 300;
+              font-weight: 500;
             }
         }
     }
@@ -91,11 +91,11 @@ section.dc-main-top{
 
 div.jumbotron {
     background-image: url(/images/jumbotron.jpg);
-    background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+    background-size: cover;
     width: 100%;
-    height: 300px;
+    height: 340px;
 }
 
 section.dc-main-bottom{
@@ -114,7 +114,7 @@ section.dc-main-bottom{
                 padding: 0 1rem;
             }
             h5{
-                font-weight: 300;
+                font-weight: 500;
                 font-size: .8rem;
                 text-transform: uppercase;
                 color: $colorWhite;
@@ -203,6 +203,7 @@ div.blue-container{
     width: 100%;
     height: 70px; 
     background-color: $brandPrimary;
+    margin-bottom: 1.5rem;
 }
 
 section.main-single-product-top{
@@ -212,7 +213,7 @@ section.main-single-product-top{
 
     img.product-poster{
         position: absolute;
-        top: -310px;
+        top: -335px;
     }
 
     div.left-content{
@@ -228,35 +229,71 @@ section.main-single-product-top{
             width: 100%;
             background-color: #55BA59;
             border-bottom: 1px solid rgb(104, 130, 59);
+            font-weight: bold;
 
             div.av-left{
                 width: 70%;
                 border-right: 1px solid rgb(104, 130, 59);
+                padding: .9rem;
+                color: white;
+                display: flex;
+                justify-content: space-between;
             }
 
             div.av-right{
                 width: 30%;
+                padding: .9rem;
+                color: white;
+                text-align: center;
+
+                i{
+                    font-size: .8rem;
+                }
             }
+        }
+
+        p{
+            color: #4A5059;
         }
     }
 
     div.right-content{
         width: 30%;
+        padding: 0 2rem;
+        color: #4A5059;
+        text-transform: uppercase;
+        font-size: .9rem;
+        font-weight: bold;
+        text-align: right;
+
+        img{
+            width: 100%;
+        }
+
+        p{
+            margin: .2rem;
+        }
     }
 }
 
 section.bg-product-bottom{
     background-color: #F6F6F6;
+    border-top: $detailBorderBottom;
+    border-bottom: $detailBorderBottom;
+    padding-bottom: 100px;
 
     div.main-single-product-bottom{
 
         div.about-single-product{
             display: flex;
             width: 100%;
+            font-size: .9rem;
 
             h3{
                 color: $singleProductColorPrimary;
                 border-bottom: 1px solid lightgray;
+                margin: 0;
+                padding: 1rem 0;
             }
 
             div.talent{
@@ -264,10 +301,14 @@ section.bg-product-bottom{
                 padding-right: 3rem;
 
                 div.artists{
-                    border-bottom: $detailBorderBottom;
+                    display: flex;
                 }
 
                 div.writers{
+                    display: flex;
+                }
+
+                div{
                     border-bottom: $detailBorderBottom;
                 }
             }
@@ -275,42 +316,84 @@ section.bg-product-bottom{
             div.specs{
                 width: 50%;
 
+                div.series{
+                    display: flex;
+
+                    p.series-text{
+                        text-transform: uppercase;
+                        color: $brandPrimary;
+                    }
+                }
+
+                div.specs-price{
+                    display: flex;
+                }
+
+                div.sale-date{
+                    display: flex;
+                }
+
                 div{
                     border-bottom: $detailBorderBottom;
                 }
             }
 
-            p.display-inline{
-                display: inline-block;
-            }
-
             p.single-product-title{
                 width: 40%;
+                color: $singleProductColorPrimary;
+
             }
+
+            p.single-product-text{
+                width: 70%;
+                color: $brandPrimary;
+            }
+        }
+
+        p{
+            margin: 0;
+            padding: .5rem 0;
         }
     }
 }
 
 section.main-single-product-links{
+    background-color: #F6F6F6;
     width: 100%;
     ul.single-product-list{
-        display: flex;
         width: 100%;
+        padding-bottom: 0;
+        justify-content: center;
+        border-left: 1px solid lightgray;
+        width: 800px;
+        margin: 0 auto;
+
+        li{
+            display: inline-block;
+        }
 
         a.list-link{
             display: flex;
             color: gray;
             text-transform: uppercase;
-            width: 180px;
+            width: 195px;
             height: 60px;
             justify-content: space-between;
             gap: 10px;
-            border: 1px solid lightgray;
+            border-right: 1px solid lightgray;
+            
+
+            h5{
+                margin: 0;
+                font-size: .7rem;
+                padding: .8rem;
+            }
 
             img{
                 width: 25px;
                 height: 35px;
                 filter: invert(20%);
+                padding: .8rem;
             }
         }
     }
@@ -319,6 +402,14 @@ section.main-single-product-links{
 .single-product-container{
     width: 900px;
     margin: 0 auto;
+}
+
+.text-light-green{
+    color: $singleProductColorSecondary;
+}
+
+.text-uppercase{
+    text-transform: uppercase;
 }
 
 #container-comics{

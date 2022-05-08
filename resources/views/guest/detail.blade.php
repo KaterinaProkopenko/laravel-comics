@@ -13,15 +13,25 @@
         <div class="left-content">
             <h2>{{$comics['title']}}</h2>
             <div class="availability">
-                <div class="av-left">U.S. Price: {{$comics['price']}}</div>
-                <div class="av-right">sdf</div>
+                <div class="av-left"> 
+                    <div>
+                        <span class="text-light-green">U.S. Price:</span>  {{$comics['price']}}
+                    </div>
+                    <div class="text-light-green text-uppercase">
+                        Available
+                    </div>
+                </div>
+                <div class="av-right">
+                    Check availability
+                    <i class="fas fa-caret-down"></i>
+                </div>
             </div>
             <p>{{$comics['description']}}</p>
 
         </div>
 
         <div class="right-content">
-            <p>text</p>
+            <p>advertisement</p>
             <img src="{{asset("images/advu.jpg")}}" alt="image">
         </div>
     </section>
@@ -36,13 +46,13 @@
                     <h3>Talent</h3>
 
                     <div class="artists">
-                        <p class="display-inline single-product-title">Art by:</p>
-                        <p class="display-inline">{{implode(", ", $comics['artists'])}}</p>
+                        <p class="single-product-title">Art by:</p>
+                        <p class="single-product-text">{{implode(", ", $comics['artists'])}}</p>
                     </div>
 
                     <div class="writers">
-                        <p class="display-inline single-product-title">Written by:</p>
-                        <p class="display-inline">{{implode(", ", $comics['writers'])}}</p>
+                        <p class="single-product-title">Written by:</p>
+                        <p class="single-product-text">{{implode(", ", $comics['writers'])}}</p>
                     </div>
 
                 </div>
@@ -51,18 +61,18 @@
                     <h3>Specs</h3>
 
                     <div class="series">
-                        <p class="display-inline single-product-title">Series:</p>
-                        <p class="display-inline">{{$comics['series']}}</p>
+                        <p class="single-product-title">Series:</p>
+                        <p class="series-text">{{$comics['series']}}</p>
                     </div>
 
                     <div class="specs-price">
-                        <p class="display-inline single-product-title">U.S. Price:</p>
-                        <p class="display-inline">{{$comics['price']}}</p>
+                        <p class="single-product-title">U.S. Price:</p>
+                        <p>{{$comics['price']}}</p>
                     </div>
 
                     <div class="sale-date">
-                        <p class="display-inline single-product-title">On Sale Date:</p>
-                        <p class="display-inline">{{$comics['sale_date']}}</p>
+                        <p class="single-product-title">On Sale Date:</p>
+                        <p>{{$comics['sale_date']}}</p>
                     </div>
                 </div>
             </div>  
@@ -75,12 +85,16 @@
     <section class="main-single-product-links">
         <ul class="single-product-list">
             @foreach ($mainNavCards as $navCard)
-                <li>
-                    <a href="{{$navCard['url']}}" class="list-link">
-                        <h5>{{$navCard['title']}}</h5>
-                        <img src="{{asset($navCard['image'])}}" alt="{{$navCard['title']}}">
-                    </a>
-                </li>
+
+                @if($navCard['title'] !== 'dc power visa')
+                    <li>
+                        <a href="{{$navCard['url']}}" class="list-link">
+                            <h5>{{$navCard['title']}}</h5>
+                            <img src="{{asset($navCard['image'])}}" alt="{{$navCard['title']}}">
+                        </a>
+                    </li>
+                @endif
+                
             @endforeach
         </ul>
     </section>
